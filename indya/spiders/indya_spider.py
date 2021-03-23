@@ -2,14 +2,14 @@ import scrapy
 from indya.items import IndyaItem
 
 class IndyaSpider(scrapy.Spider):
-    name = 'indya_spider'
+    name = 'indya_spider'  #name of spider
     start_urls = [
-        'https://www.houseofindya.com/zyra/necklace-sets/cat'
+        'https://www.houseofindya.com/zyra/necklace-sets/cat'   # url that we need to scrape
     ]
     
     def parse(self,response):
-        items = IndyaItem()
-
+        items = IndyaItem()    # IndtaItme instance
+        # iterating for products and return output
         for i in range(len(response.css('#JsonProductList p::text').extract())):
             description = response.css('#JsonProductList p::text')[i].extract()
             price = response.css('#JsonProductList span:nth-child(1)')[i].css('::text').extract()
