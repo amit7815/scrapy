@@ -1,7 +1,7 @@
 import scrapy
 from indya.items import IndyaItem
 
-class QuotesSpider(scrapy.Spider):
+class IndyaSpider(scrapy.Spider):
     name = 'indya_spider'
     start_urls = [
         'https://www.houseofindya.com/zyra/necklace-sets/cat'
