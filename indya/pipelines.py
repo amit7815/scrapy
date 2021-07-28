@@ -9,5 +9,5 @@ from itemadapter import ItemAdapter
 
 
 class IndyaPipeline:
-    def process_item(self, item, spider):
-        return item
+    def process_item(self, item1, spider):
+        return item1
